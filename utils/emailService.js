@@ -38,7 +38,7 @@ export const sendFormEmail = async (formData) => {
             <tr><td style="padding: 8px; font-weight: bold;">${formData.ownerName?.label}:</td><td style="padding: 8px;">${formData.ownerName?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.strategicObjective?.label}:</td><td style="padding: 8px;">${formData.strategicObjective?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.performanceIndicator?.label}:</td><td style="padding: 8px;">${formData.performanceIndicator?.value}</td></tr>
-            <tr><td style="padding: 8px; font-weight: bold;">${formData.previousReading?.label}:</td><td style="padding: 8px;">${formData.previousReading?.value}</td></tr>
+            // <tr><td style="padding: 8px; font-weight: bold;">${formData.previousReading?.label}:</td><td style="padding: 8px;">${formData.previousReading?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.targetReading?.label}:</td><td style="padding: 8px;">${formData.targetReading?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.email?.label}:</td><td style="padding: 8px;">${formData.email?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.phone?.label}:</td><td style="padding: 8px;">${formData.phone?.value}</td></tr>
@@ -55,9 +55,9 @@ export const sendFormEmail = async (formData) => {
             <tr><td style="padding: 8px; font-weight: bold;">${formData.secondIndicator?.label}:</td><td style="padding: 8px;">${formData.secondIndicator?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.thirdIndicator?.label}:</td><td style="padding: 8px;">${formData.thirdIndicator?.value}</td></tr>
 
-            <tr><td style="padding: 8px; font-weight: bold;">${formData.potentialChallenges?.label}:</td><td style="padding: 8px;">${formData.potentialChallenges?.value}</td></tr>
-            <tr><td style="padding: 8px; font-weight: bold;">${formData.uniqueProcedures?.label}:</td><td style="padding: 8px;">${formData.uniqueProcedures?.value}</td></tr>
-            <tr><td style="padding: 8px; font-weight: bold;">${formData.projectBudget?.label}:</td><td style="padding: 8px;">${formData.projectBudget?.value}</td></tr>
+            // <tr><td style="padding: 8px; font-weight: bold;">${formData.potentialChallenges?.label}:</td><td style="padding: 8px;">${formData.potentialChallenges?.value}</td></tr>
+            // <tr><td style="padding: 8px; font-weight: bold;">${formData.uniqueProcedures?.label}:</td><td style="padding: 8px;">${formData.uniqueProcedures?.value}</td></tr>
+            // <tr><td style="padding: 8px; font-weight: bold;">${formData.projectBudget?.label}:</td><td style="padding: 8px;">${formData.projectBudget?.value}</td></tr>
 
             <tr><td style="padding: 8px; font-weight: bold;">${formData.authorityName?.label}:</td><td style="padding: 8px;">${formData.authorityName?.value}</td></tr>
             <tr><td style="padding: 8px; font-weight: bold;">${formData.authorityDate?.label}:</td><td style="padding: 8px;">${formData.authorityDate?.value}</td></tr>

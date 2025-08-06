@@ -38,11 +38,11 @@ export const updateFormConfig = async (req, res) => {
 export const resetDefaultFormConfig = async (req, res) => {
     try {
         const defaultFields = [
-            { fieldKey: "projectName", label: "اسم المشروع / البرنامج", placeholder: "أدخل اسم المشروع / البرنامج", isRequired: true },
-            { fieldKey: "ownerName", label: "مالك المشروع / البرنامج - إدارة / قسم ", placeholder: "اسم الإدارة المالكة", isRequired: true },
+            { fieldKey: "projectName", label: "اسم البرنامج", placeholder: "أدخل اسم البرنامج", isRequired: true },
+            { fieldKey: "ownerName", label: "مالك البرنامج - إدارة / كلية ", placeholder: "اسم الإدارة المالكة", isRequired: true },
             { fieldKey: "strategicObjective", label: "الهدف الاستراتيجي", placeholder: "أدخل الهدف الاستراتيجي", isRequired: true },
             { fieldKey: "performanceIndicator", label: "مؤشر الأداء المستهدف", placeholder: "أدخل مؤشر الأداء المستهدف", isRequired: true },
-            { fieldKey: "previousReading", label: "القراءة السابقة للمؤشر", placeholder: "أدخل القراءة السابقة للمؤشر", isRequired: true },
+            { fieldKey: "previousReading", label: "القراءة السابقة للمؤشر", placeholder: "أدخل القراءة السابقة للمؤشر", isRequired: false },
             { fieldKey: "targetReading", label: "القراءة المستهدفة للمؤشر", placeholder: "أدخل القراءة المستهدفة للمؤشر", isRequired: true },
 
             // بيانات التواصل
@@ -51,17 +51,17 @@ export const resetDefaultFormConfig = async (req, res) => {
             { fieldKey: "networkPhone", label: "الهاتف الشبكي - اختياري ", placeholder: "الهاتف الشبكي", isRequired: false },
 
             // الهدف الرئيسي
-            { fieldKey: "mainProjectObjective", label: "  الهدف الرئيسي للمشروع او البرنامج ", placeholder: "أدخل الهدف الرئيسي", isRequired: true },
+            { fieldKey: "mainProjectObjective", label: "  الهدف الرئيسي للبرنامج ", placeholder: "أدخل الهدف الرئيسي", isRequired: true },
 
             // فترة التنفيذ
             { fieldKey: "startDate", label: "فترة التنفيذ  |  من - إلي ", placeholder: "mm/dd/yyyy", isRequired: true },
 
             // وصف المشروع
-            { fieldKey: "detailedProjectDescription", label: "  الوصف التفصيلي للمشروع- البرنامج يتضمن الأنشطة والمراحل التنفيذية", placeholder: "يتضمن الأنشطة والمراحل التنفيذية", isRequired: true },
+            { fieldKey: "detailedProjectDescription", label: "  الوصف التفصيلي للبرنامج يتضمن الأنشطة والمراحل التنفيذية", placeholder: "  أدخل الوصف التفصيلي  ", isRequired: true },
 
             // الإدارة الداعمة والشركاء
-            { fieldKey: "supportingManagement", label: "الإدارة المساندة من داخل إدارة التعليم إن وجدت", placeholder: "الإدارة المساندة", isRequired: true },
-            { fieldKey: "supportingAgency", label: "الجهة الداعمة من خارج إدارة التعليم شركات إن وجدت", placeholder: "الجهة الداعمة", isRequired: true },
+            { fieldKey: "supportingManagement", label: "الإدارة المساندة من داخل الجامعة إن وجدت", placeholder: "الإدارة المساندة", isRequired: true },
+            { fieldKey: "supportingAgency", label: "الجهة الداعمة من خارج الجامعة إن وجدت", placeholder: "الجهة الداعمة", isRequired: true },
             { fieldKey: "targetGroup", label: "الفئة المستهدفة", placeholder: "الفئة المستهدفة", isRequired: true },
 
             // مؤشرات الأداء الإضافية
@@ -70,11 +70,11 @@ export const resetDefaultFormConfig = async (req, res) => {
             { fieldKey: "thirdIndicator", label: "المؤشر الثالث", placeholder: "اذكر المؤشر الثالث", isRequired: true },
 
             // التحديات والإجراءات
-            { fieldKey: "potentialChallenges", label: "الصعوبات / التحديات المحتملة", placeholder: "اذكر الصعوبات والتحديات المحتملة", isRequired: true },
-            { fieldKey: "uniqueProcedures", label: "الإجراءات المقترحة للتعامل معها", placeholder: "اذكر الإجراءات المقترحة", isRequired: true },
+            { fieldKey: "potentialChallenges", label: "الصعوبات / التحديات المحتملة", placeholder: "اذكر الصعوبات والتحديات المحتملة", isRequired: false },
+            { fieldKey: "uniqueProcedures", label: "الإجراءات المقترحة للتعامل معها", placeholder: "اذكر الإجراءات المقترحة", isRequired: false },
 
             // الميزانية
-            { fieldKey: "projectBudget", label: "الموازنة التقديرية للمشروع / البرنامج", placeholder: "أدخل الموازنة التقديرية", isRequired: true },
+            { fieldKey: "projectBudget", label: "الموازنة التقديرية للبرنامج", placeholder: "أدخل الموازنة التقديرية", isRequired: false },
 
             // اعتماد صاحب الصلاحية
             { fieldKey: "authorityName", label: " الاسم  ", placeholder: "اسم صاحب الصلاحية", isRequired: true },

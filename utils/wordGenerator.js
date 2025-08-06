@@ -87,7 +87,7 @@ export const createWordDoc = (form) => {
                     children: [
                         new Paragraph({
                             children: [new TextRun({
-                                text: "نموذج اعتماد مشروع / برنامج",
+                                text: "نموذج اعتماد  برنامج",
                                 bold: true,
                                 font: font,
                                 size: 42
@@ -108,8 +108,8 @@ export const createWordDoc = (form) => {
         }),
         new TableRow({
             children: [
-                headerCell(form.ownerName?.label || "اسم مالك المشروع", 4320),
-                headerCell(form.projectName?.label || "اسم المشروع", 4320)
+                headerCell(form.ownerName?.label || " مالك البرنامج", 4320),
+                headerCell(form.projectName?.label || "اسم البرنامج", 4320)
             ]
         }),
         new TableRow({
@@ -132,14 +132,14 @@ export const createWordDoc = (form) => {
         }),
         new TableRow({
             children: [
-                headerCell(form.targetReading?.label || "القراءة المستهدفة للمؤشر", 4320),
-                headerCell(form.previousReading?.label || "القراءة السابقة للمؤشر", 4320)
+                headerCell("" || "", 4320),
+                headerCell(form.targetReading?.label || "القراءة المستهدفة للمؤشر", 4320)
             ]
         }),
         new TableRow({
             children: [
-                dataCell(form.targetReading?.value || "85%", 4320),
-                dataCell(form.previousReading?.value || "50%", 4320)
+                dataCell(form.previousReading?.value || "", 4320),
+                dataCell(form.targetReading?.value || "", 4320)
             ]
         })
     ]);
@@ -179,7 +179,7 @@ export const createWordDoc = (form) => {
             children: [
                 headerCell(form.networkPhone?.label || "الهاتف الشبكي", 2880),
                 headerCell(form.phone?.label || "الجوال", 2880),
-                headerCell(form.email?.label || "البريد الإلكتروني الوزاري", 2880),
+                headerCell(form.email?.label || "البريد الإلكتروني ", 2880),
             ]
         }),
         new TableRow({
@@ -195,12 +195,12 @@ export const createWordDoc = (form) => {
     const objectiveTable = createTable([
         new TableRow({
             children: [
-                headerCell(form.mainProjectObjective?.label || "الهدف الرئيسي للمشروع / البرنامج", 8640)
+                headerCell(form.mainProjectObjective?.label || "الهدف الرئيسي للبرنامج", 8640)
             ]
         }),
         new TableRow({
             children: [
-                dataCell(form.mainProjectObjective?.value || "رفع كفاءة المعلمين في استخدام أدوات التعليم الرقمي", 8640)
+                dataCell(form.mainProjectObjective?.value || "  ", 8640)
             ]
         }),
         new TableRow({
@@ -214,7 +214,7 @@ export const createWordDoc = (form) => {
             ]
         }), new TableRow({
             children: [
-                headerCell(form.detailedProjectDescription?.label || "الوصف التفصيلي للمشروع / البرنامج والمراحل التنفيذية يتضمن الأنشطة", 8640)
+                headerCell(form.detailedProjectDescription?.label || "الوصف التفصيلي للبرنامج والمراحل التنفيذية يتضمن الأنشطة", 8640)
             ]
         }),
         new TableRow({
@@ -228,8 +228,8 @@ export const createWordDoc = (form) => {
         new TableRow({
             children: [
                 headerCell(form.targetGroup?.label || "الفئة / الجهة المستهدفة", 2880),
-                headerCell(form.supportingAgency?.label || "الجهة الداعمة ) من خارج إدارة التعليم ( شراكات إن وجدت", 2880),
-                headerCell(form.supportingManagement?.label || "الإدارة المساندة ) من داخل إدارة التعليم (  إن وجدت", 2880)
+                headerCell(form.supportingAgency?.label || "الجهة الداعمة من خارج الجامعة إن وجدت", 2880),
+                headerCell(form.supportingManagement?.label || "الإدارة المساندة من داخل الجامعة إن وجدت", 2880)
             ]
         }),
         new TableRow({
@@ -253,7 +253,7 @@ export const createWordDoc = (form) => {
                     children: [
                         new Paragraph({
                             children: [new TextRun({
-                                text: form.teamMembersSection?.label || "فريق العمل بالمشروع / البرنامج",
+                                text: form.teamMembersSection?.label || "فريق العمل بالبرنامج",
                                 bold: true,
                                 font: font,
                                 size: 32
@@ -318,7 +318,7 @@ export const createWordDoc = (form) => {
                     children: [
                         new Paragraph({
                             children: [new TextRun({
-                                text: form.performanceIndicatorsSection?.label || "مؤشرات الأداء الخاصة بالمشروع / البرنامج",
+                                text: form.performanceIndicatorsSection?.label || "مؤشرات الأداء الخاصة بالبرنامج",
                                 bold: true,
                                 font: font,
                                 size: 32
@@ -355,38 +355,38 @@ export const createWordDoc = (form) => {
     ]);
 
     // PAGE 2 - TABLE 3: Challenges and Solutions
-    const challengesTable = createTable([
-        new TableRow({
-            children: [
-                headerCell(form.potentialChallenges?.label || "الصعوبات / التحديات المحتملة", 8640)
-            ]
-        }),
-        new TableRow({
-            children: [
-                dataCell(form.potentialChallenges?.value || "", 8640)
-            ]
-        }),
-        new TableRow({
-            children: [
-                headerCell(form.uniqueProcedures?.label || "الإجراءات المقترحة للتعامل معها", 8640)
-            ]
-        }),
-        new TableRow({
-            children: [
-                dataCell(form.uniqueProcedures?.value || "", 8640)
-            ]
-        }),
-        new TableRow({
-            children: [
-                headerCell(form.projectBudget?.label || "الموازنة التقديرية للمشروع / البرنامج", 8640)
-            ]
-        }),
-        new TableRow({
-            children: [
-                dataCell(form.projectBudget?.value || "", 8640)
-            ]
-        })
-    ]);
+    // const challengesTable = createTable([
+    //     new TableRow({
+    //         children: [
+    //             headerCell(form.potentialChallenges?.label || "الصعوبات / التحديات المحتملة", 8640)
+    //         ]
+    //     }),
+    //     new TableRow({
+    //         children: [
+    //             dataCell(form.potentialChallenges?.value || "", 8640)
+    //         ]
+    //     }),
+    //     new TableRow({
+    //         children: [
+    //             headerCell(form.uniqueProcedures?.label || "الإجراءات المقترحة للتعامل معها", 8640)
+    //         ]
+    //     }),
+    //     new TableRow({
+    //         children: [
+    //             dataCell(form.uniqueProcedures?.value || "", 8640)
+    //         ]
+    //     }),
+    //     new TableRow({
+    //         children: [
+    //             headerCell(form.projectBudget?.label || "الموازنة التقديرية للمشروع / البرنامج", 8640)
+    //         ]
+    //     }),
+    //     new TableRow({
+    //         children: [
+    //             dataCell(form.projectBudget?.value || "", 8640)
+    //         ]
+    //     })
+    // ]);
 
     // PAGE 2 - TABLE 4: Approval Section
     const approvalTable = createTable([
@@ -400,7 +400,7 @@ export const createWordDoc = (form) => {
                     children: [
                         new Paragraph({
                             children: [new TextRun({
-                                text: form.approvalSection?.label || "اعتماد صاحب الصلاحية",
+                                text: form.approvalSection?.label || "مدير الإدارة / عميد الكلية",
                                 bold: true,
                                 font: font,
                                 size: 32
@@ -482,8 +482,8 @@ export const createWordDoc = (form) => {
                 performanceTable,
                 spacingParagraph(),
 
-                challengesTable,
-                spacingParagraph(),
+                // challengesTable,
+                // spacingParagraph(),
 
                 approvalTable
             ]
